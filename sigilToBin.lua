@@ -99,6 +99,42 @@ function toBin(num)
 end
 
 -- Converts all vertices into a binary base number
+-- Follow this pattern (H = Horizontal line, V = Vertical line, MD = Main Diagonal, SD = Secondary Diagonal, PD = Coprime Diagonal)
+-- 30 - Bottom Circle
+-- 29 - Top Circle
+
+-- 28 - H(1, 2)
+-- 27 - H(2, 3)
+-- 26 - H(4, 5)
+-- 25 - H(5, 6)
+-- 24 - H(7, 8)
+-- 23 - H(8, 9)
+
+-- 22 - V(1, 4)
+-- 21 - V(4, 7)
+-- 20 - V(2, 5)
+-- 19 - V(5, 8)
+-- 18 - V(3, 6)
+-- 17 - V(6, 9)
+
+-- 16 - MD(4, 8)
+-- 15 - MD(1, 5)
+-- 14 - MD(5, 9)
+-- 13 - MD(3, 6)
+
+-- 12 - SD(2, 4)
+-- 11 - SD(3, 5)
+-- 10 - SD(5, 7)
+-- 9 - SD(6, 8)
+
+-- 8 - CD(9, 4)
+-- 7 - CD(9, 2)
+-- 6 - CD(7, 2)
+-- 5 - CD(7, 6)
+-- 4 - CD(3, 4)
+-- 3 - CD(3, 8)
+-- 2 - CD(1, 8)
+-- 1 - CD(1, 6)
 function verticesToBin(vertices)
     local line = {}
 
